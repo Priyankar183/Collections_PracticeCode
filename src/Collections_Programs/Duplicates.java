@@ -8,6 +8,7 @@ import java.util.Map;
 public class Duplicates
 {
     String str = "priyanka";
+    int[] arr = new int[]{1,2,3,4,1};
     //Find duplicate characters in a string using collections
     public void FindDuplicatesCharInString() {
 
@@ -146,5 +147,50 @@ public class Duplicates
                 System.out.println("Duplicate characters found");
             }
         }
+    }
+
+    public void FindDuplicateNumbers()
+    {
+
+     HashSet<Integer> a= new HashSet<>();
+     HashSet<Integer> b= new HashSet<>();
+
+     for (int i : arr)
+     {
+         if(!a.add(i))
+         {
+             b.add(i);
+         }
+     }
+     System.out.println(b);
+    }
+
+    public void RemoveDuplicatesFromArray()
+    {
+    HashSet<Integer> a = new HashSet<>();
+    for(int i : arr)
+    {
+        a.add(i);
+    }
+
+    for(int j: a)
+    {
+        System.out.println(j);
+    }
+    }
+
+    public void OccuranceOfIntegers()
+    {
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int i : arr)
+        {
+            map.put(i,map.getOrDefault(i,0)+1);
+        }
+
+        for(Map.Entry<Integer,Integer> entry : map.entrySet())
+        {
+            System.out.println(entry.getKey() + " : "+entry.getValue());
+        }
+
     }
 }
