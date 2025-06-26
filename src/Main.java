@@ -6,7 +6,8 @@ public class Main {
     public static void main(String[] args)
     {
         Duplicates d = new Duplicates();
-        d.FindFirstDuplicateCharacter();
+        d.TwoStrings_DuplicateCharacters();
 
     }
 }
+

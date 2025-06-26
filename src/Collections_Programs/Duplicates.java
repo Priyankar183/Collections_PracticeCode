@@ -78,5 +78,73 @@ public class Duplicates
         System.out.println(b);
     }
 
+    public void Removeduplicatecharactersfromstring()
+    {
+        char[] arr = str.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        HashSet<Character> a = new HashSet<>();
+        for (char ch : arr)
+        {
+            if(!a.contains(ch)) {
+                a.add(ch);
+                sb.append(ch);
+            }
+        }
+        System.out.println(sb);
+    }
+    public void FindOccurenceOfDuplicateWordsInSentence()
+    {
+    String str1 = "Hare Rama Hare Krishna Krishna Krishna Hare Hare";
+    String[] arrstr = str1.split(" ");
+    HashMap<String,Integer> map = new HashMap<>();
+    for (String a: arrstr)
+    {
+        map.put(a,map.getOrDefault(a,0)+1);
+    }
 
+    for(Map.Entry<String,Integer> entry : map.entrySet()) {
+        System.out.println(entry.getKey() + " : " + entry.getValue());
+    }
+    }
+
+    public void RemoveDuplicateWordFromSentence()
+    {
+        String str = "Hare Govind Hare";
+
+        String[] arrstr = str.split(" ");
+
+        HashSet<String> a = new HashSet<>();
+        StringBuilder sb = new StringBuilder();
+
+        for(String ss : arrstr)
+        {
+            if(!a.contains(ss))
+            {
+                a.add(ss);
+                sb.append(ss);
+            }
+        }
+
+        System.out.println(sb);
+    }
+
+    public void TwoStrings_DuplicateCharacters()
+    {
+        String s1 = "priyanka";
+        String s2 = "tul";
+
+        HashSet<Character> a = new HashSet<>();
+
+        for(char c: s1.toCharArray())
+        {
+            a.add(c);
+        }
+        for (char c1 : s2.toCharArray())
+        {
+            if(a.contains(c1))
+            {
+                System.out.println("Duplicate characters found");
+            }
+        }
+    }
 }
